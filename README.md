@@ -2,7 +2,9 @@
 
 ## Overview
 
-The Device Management System is a CRUD (Create, Read, Update, Delete) application that manages device information. It provides RESTful API endpoints to perform operations on devices, such as adding new devices, retrieving existing devices, updating device details, and deleting devices.
+The Device Management System is a CRUD (Create, Read, Update, Delete) application that manages device information. It
+provides RESTful API endpoints to perform operations on devices, such as adding new devices, retrieving existing
+devices, updating device details, and deleting devices.
 
 ## Features
 
@@ -27,8 +29,8 @@ The Device Management System is a CRUD (Create, Read, Update, Delete) applicatio
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/yourusername/device-management-system.git
-    cd device-management-system
+    git clone https://github.com/ramimohsen/device-management.git
+    cd device-management
     ```
 
 2. **Build the project**:
@@ -51,14 +53,14 @@ Once the application is running, you can access the Swagger UI to interact with 
 
 ### Device Controller
 
-| Method | Endpoint                      | Description                          |
-|--------|-------------------------------|--------------------------------------|
-| GET    | /api/v1/device/{id}           | Retrieve device by ID                |
-| GET    | /api/v1/device                | Retrieve all devices                 |
-| POST   | /api/v1/device                | Create a new device                  |
-| PUT    | /api/v1/device                | Update an existing device            |
-| DELETE | /api/v1/device/{id}           | Delete a device by ID                |
-| GET    | /api/v1/device/brand/{brand}  | Retrieve devices by brand            |
+| Method | Endpoint                     | Description               |
+|--------|------------------------------|---------------------------|
+| GET    | /api/v1/device/{id}          | Retrieve device by ID     |
+| GET    | /api/v1/device               | Retrieve all devices      |
+| POST   | /api/v1/device               | Create a new device       |
+| PUT    | /api/v1/device               | Update an existing device |
+| DELETE | /api/v1/device/{id}          | Delete a device by ID     |
+| GET    | /api/v1/device/brand/{brand} | Retrieve devices by brand |
 
 ## Example JSON Requests
 
@@ -70,23 +72,25 @@ To run the tests, execute the following command:
 ./mvnw test
 ```
 
-
 ### Create Device
 
-```json
 POST /api/v1/device
 Content-Type: application/json
 
+```json
 {
   "name": "iPhone 13",
   "brand": "APPLE"
 }
+```
 
 PUT /api/v1/device
 Content-Type: application/json
 
+```json
 {
   "id": 1,
   "name": "iPhone 13 Pro",
   "brand": "APPLE"
 }
+```
